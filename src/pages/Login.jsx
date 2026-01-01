@@ -11,7 +11,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', formData);
+      const res = await axios.post('https://task-app-back-end.vercel.app/api/auth/login', formData);
       localStorage.setItem("name", res?.data?.name);
       console.log("Name set in localStorage:", res?.data?.name);
       localStorage.setItem('token', res.data.token);
